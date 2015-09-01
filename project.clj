@@ -17,7 +17,8 @@
 
              :dev
              [:android-common :android-user
-              {:dependencies [[org.clojure/tools.nrepl "0.2.10"]]
+              {:dependencies [[org.clojure/tools.nrepl "0.2.10"]
+                              [cider/cider-nrepl "0.9.1"]]
                :target-path "target/debug"
                :android {:aot :all-with-unused
                          :rename-manifest-package "com.lambdacat.anfocal.debug"
@@ -36,7 +37,7 @@
 
                 :lean
                 [:release
-                 {:dependencies ^:replace [[org.skummet/clojure "1.7.0-RC3-r2" :use-resources true]
+                 {:dependencies ^:replace [[org.skummet/clojure "1.7.0-RC3-SNAPSHOT" :use-resources true]
                                            [neko/neko "4.0.0-alpha5"]]
                   :exclusions [[org.clojure/clojure]
                                [org.clojure-android/clojure]]
